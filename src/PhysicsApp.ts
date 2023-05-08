@@ -1,6 +1,6 @@
 import { Composite, Engine, Runner } from "matter-js";
 import { Application } from "pixi.js";
-import { PhysicsBody, RectangleBody } from "./Body";
+import { PhysicsBody } from "./Body";
 
 export class PhysicsApp extends Application{
 
@@ -22,10 +22,14 @@ export class PhysicsApp extends Application{
         this.bodies.forEach(body => body.update());
     }
 
-    addBody(body: RectangleBody){
+    addBody(body: PhysicsBody){
         this.bodies.push(body);
         Composite.add(this.engine.world, body.physicsBody);
         this.stage.addChild(body);
+    }
+
+    addBodies(...bodies: PhysicsBody[]){
+        bodies.forEach(body => this.addBody(body));
     }
 
 
