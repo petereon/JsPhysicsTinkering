@@ -5,7 +5,7 @@ This is scratch-pad fun-house project for tinkering with JS physics and renderin
 # TODOs
 
 - [x] Getting very basic stuff rendered
-- [x] Driving movement of `pixie.js` `Sprite` from `matter-js` `Body`
+- [x] Driving movement of `pixi.js` `Sprite` from `matter-js` `Body`
 - [x] Creating wrapper around `Engine`, `Application` and `Runner` to debloat `main.ts`
 - [x] Creating wrapper around `Body`  and `Sprite` to ensure easy position and rotation updates
 - [x] Controlling `Body` using a keyboard
